@@ -27,8 +27,6 @@ html {
     height: 100vh;
     object-fit: cover;
     object-position: center;
-    filter: blur(5px);
-    transform: scale(1.2); 
 }
 
 body {
@@ -40,11 +38,13 @@ body {
 
 .container {
     width: 450px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.678);
     border-radius: 8px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5); /* Ombre noire floue */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    position: relative; /* Nécessaire pour que l'ombre soit centrée */
+    z-index: 1; /* Assure que le conteneur est au-dessus de l'image */
 }
 
 .container .header {
@@ -76,7 +76,7 @@ body {
     width: 100%;
     height: 50px;
     color: #000;
-    background: #ffffff46;
+    background: #ffffff54;
     font-size: 1.6rem;
     font-weight: 500;
     border-radius: 4px; 
