@@ -7,9 +7,211 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+.background-image {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-image img {
+    opacity: 0.9;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(5px);
+    transform: scale(1.2); 
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
 }
+
+.container {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.container .header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1.2rem 1.8rem;
+}
+
+.container h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 0.3rem; 
+}
+
+.container p {
+    font-size: 1.2rem;
+    color: #353535;
+    line-height: 1.5;
+}
+
+.wrapper {
+    padding: 2rem 2.5rem;
+}
+
+.wrapper .input-box {
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    color: #000;
+    background: #ffffff46;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 4px; 
+    letter-spacing: 1.4px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0 3rem 0 2rem;
+}
+
+.input-box span {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    line-height: 50px;
+    color: #4e4e4e
+}
+
+.input-box span:hover {
+    color: #000000 !important;
+}
+
+.wrapper .pass-indicator {
+    width: 100%;
+    height: 4px;
+    font-size: 1.5rem;
+    position: relative;
+    margin-top: 0.8rem;
+    border-radius: 25px;
+}
+
+.pass-indicator::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.pass-indicator#easy::before {
+    width: 20%;
+    background: #ff0000;
+}
+.pass-indicator#medium::before {
+    width: 20%;
+    background: #ff9900;
+}
+.pass-indicator#strong::before {
+    width: 20%;
+    background: #00ff00;
+}
+
+.wrapper .pass-length {
+    margin: 2rem 0 2rem;
+}
+
+.pass-length .details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pass-length .title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.pass-length input {
+    width: 100%;
+    height: 5px; 
+}
+
+.pass-settings .title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem; 
+}
+
+.pass-settings .options {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1.8rem;
+    font-size: 1.4rem;
+}
+
+.pass-settings .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100% / 2);
+}
+
+.options .option:first-child {
+    pointer-events: none;
+}
+
+.options .option:first-child input {
+    opacity: 0.7;
+}
+
+.options .option input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.options .option label {
+    cursor: pointer;
+    color:#353535;
+    padding-left: 0.8rem;
+}
+
+.wrapper .generator-btn {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1f4240;
+    font-size: 1.5rem;
+    padding: 1.2rem 0;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin: 2.3rem 0 1.5rem;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 350px;
+        padding: 0 1rem;
+    }
+    .wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .pass-settings .options {
+        font-size: 1.3rem;
+    }
