@@ -18,7 +18,7 @@ It allows you to generate secure passwords based on selected options (length, ch
 ## 🚀 Demo
 
 🖥️ Try it live here:  
-➡️ [https://tonpseudo.github.io/password-generator](https://jeredevio.github.io/SecureGen)
+➡️ [SecureGen - Password Generator](https://jeredevio.github.io/SecureGen)
 
 *(Replace with your actual GitHub Pages URL)*
 
